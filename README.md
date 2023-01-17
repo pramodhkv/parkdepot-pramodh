@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# ParkDepot - Frontend Coding Challenge
+
+Thank you for giving me the opportunity to complete this challenge. I enjoyed working on it and I hope you like the result.
+
+## Tech Stack
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+- 📦 **React**
+- 🔐 **TypeScript**
+- 🎨 **Tailwind CSS**
+- 💾 **Apollo**
+
+## Features
+
+- List the ships in Gallery view and List view
+- Filter the ships by type
+- Display the ship details on click of the card or list item
+
+## Potential Improvements
+
+- Add Search functionality
+- Add test cases
+- Improve Responsive design
+- Improve loading component & no results found component
 
 ## Available Scripts
 

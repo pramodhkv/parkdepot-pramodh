@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import ErrorMessage from "../../components/ErrorMessage";
+import Loader from "../../components/Loader";
+import NoResultsFound from "../../components/NoResultsFound";
 import { useFetchShipDetails } from "../../hooks";
 
 const ShipDetails = () => {
@@ -16,29 +18,21 @@ const ShipDetails = () => {
   }
 
   if (loading) {
-    return (
-      <div className="container mx-auto my-8 w-full flex justify-center">
-        <p className="text-white text-2xl font-bold py-2">Loading...</p>
-      </div>
-    );
+    return <Loader />;
   }
 
   if (!ship) {
-    return (
-      <div className="container mx-auto my-8 w-full flex justify-center">
-        <p className="text-white text-2xl font-bold py-2">No data found</p>
-      </div>
-    );
+    return <NoResultsFound />;
   }
 
   return (
-    <div className="container mx-auto my-8 flex items-start gap-8 h-full">
-      <div className="flex-auto flex items-center h-3/4">
+    <div className="container mx-auto my-8 p-3 flex flex-col md:flex-row items-start gap-8 h-full">
+      <div className="flex-auto flex items-center md:h-3/4">
         <img
           src={ship.image}
           alt={ship.name}
           loading="lazy"
-          className="w-full h-full rounded-lg"
+          className="w-full min-h-[30rem] md:h-full rounded-lg"
         />
       </div>
 
@@ -85,10 +79,15 @@ const ShipDetails = () => {
 
         <div className="flex flex-col gap-2">
           <p className="text-white/60 text-sm font-bold mt-3">Missions:</p>
-          <div className="grid grid-cols-4 text-center gap-3">
+          <div className="grid grid-cols-3 md:grid-cols-4 text-center gap-3">
             {ship.missions.map((mission: any) => (
-              <div className="bg-searchbar-400 p-4 rounded-xl">
-                <p className="text-white font-bold text-sm">{mission.name}</p>
+              <div
+                className="bg-searchbar-400 p-4 rounded-xl"
+                key={mission.name}
+              >
+                <p className="text-white font-bold text-xs md:text-sm">
+                  {mission.name}
+                </p>
               </div>
             ))}
           </div>

@@ -20,12 +20,12 @@ const Dropdown = (props: IDropdownProps) => {
 
   return (
     <Menu as="div" className="w-full relative">
-      <Menu.Button className="inline-flex w-full min-h-[3rem] justify-center rounded-md bg-searchbar-400 p-3 text-white font-bold text-lg ">
+      <Menu.Button className="inline-flex w-full min-h-[3rem] justify-center rounded-md bg-searchbar-400 p-3 text-white font-bold text-sm md:text-lg ">
         {selectedMenu}
         <FiChevronDown className="ml-2 mt-1" aria-hidden="true" />
       </Menu.Button>
 
-      <Menu.Items className="absolute mt-3 w-56 rounded-lg bg-searchbar-400 z-10 backdrop-blur-2xl text-lg text-white font-bold">
+      <Menu.Items className="absolute mt-3 w-56 rounded-lg bg-searchbar-400 z-10 backdrop-blur-2xl text-sm md:text-lg text-white font-bold">
         <div className="px-1 py-1 ">
           {menus.map((menu) => (
             <Menu.Item key={menu}>

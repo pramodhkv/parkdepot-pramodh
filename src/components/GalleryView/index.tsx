@@ -3,6 +3,8 @@ import ErrorMessage from "../../components/ErrorMessage";
 import { InView } from "react-intersection-observer";
 import ShipCard from "../../components/ShipCard";
 import { useShipsManager } from "../../hooks";
+import Loader from "../Loader";
+import NoResultsFound from "../NoResultsFound";
 
 const GalleryView = (props: IViewProps) => {
   const { shipType } = props;
@@ -35,11 +37,8 @@ const GalleryView = (props: IViewProps) => {
         />
       )}
 
-      {loading && (
-        <div className="w-full flex justify-center">
-          <p className="text-white text-2xl font-bold py-2">Loading...</p>
-        </div>
-      )}
+      {loading && <Loader />}
+      {!loading && !ships.length && <NoResultsFound />}
     </div>
   );
 };

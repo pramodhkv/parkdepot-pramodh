@@ -12,7 +12,7 @@ const ShipCard = (props: IShipCardProps) => {
   return (
     <Link
       to={`/details/${ship.id}`}
-      className="rounded-2xl p-1 border-2 border-thin-white w-[350px] h-auto my-3 mr-3 cursor-pointer"
+      className="rounded-2xl p-1 border-2 border-thin-white w-[350px] h-auto my-3 mx-3 cursor-pointer"
     >
       <div className="flex flex-col p-1">
         <div className="image-wrapper w-full h-[294px] relative overflow-hidden">

@@ -3,6 +3,8 @@ import ErrorMessage from "../../components/ErrorMessage";
 import ShipListView from "../../components/ShipListView";
 import { InView } from "react-intersection-observer";
 import { useShipsManager } from "../../hooks";
+import Loader from "../Loader";
+import NoResultsFound from "../NoResultsFound";
 
 const ListView = (props: IViewProps) => {
   const { shipType } = props;
@@ -35,11 +37,8 @@ const ListView = (props: IViewProps) => {
         />
       )}
 
-      {loading && (
-        <div className="w-full flex justify-center">
-          <p className="text-white text-2xl font-bold py-2">Loading...</p>
-        </div>
-      )}
+      {loading && <Loader />}
+      {!loading && !ships.length && <NoResultsFound />}
     </div>
   );
 };

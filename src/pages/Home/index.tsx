@@ -20,8 +20,8 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto mb-4 h-full">
-      <div className="flex items-center gap-5 w-full my-8">
+    <div className="container mx-auto mb-4 p-3">
+      <div className="flex items-center gap-5 w-full my-8 mx-3">
         <div className="w-56">
           <Dropdown menus={dropdownMenus} onMenuChange={toggleShipType} />
         </div>
