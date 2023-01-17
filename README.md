@@ -22,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Add Search functionality
 - Add test cases
 - Improve Responsive design
-- Improve loading component & no results found component
+- Stylize loading component & no results found component
 
 ## Available Scripts
 
