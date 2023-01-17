@@ -6,7 +6,7 @@ import Pages from "./pages";
 
 function App() {
   return (
-    <div className="App bg-body-bg text-white font-montserrat h-screen">
+    <div className="App bg-body text-white font-montserrat h-screen">
       <BrowserRouter>
         <Navbar />
         <Pages />

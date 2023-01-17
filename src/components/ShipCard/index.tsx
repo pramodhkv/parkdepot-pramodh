@@ -32,7 +32,7 @@ const ShipCard = (props: IShipCardProps) => {
           {ship.name}
         </h3>
 
-        <div className="bg-searchbar-400 p-3 flex items-center justify-between mt-3 mb-1 rounded-lg">
+        <div className="bg-body-400 p-3 flex items-center justify-between mt-3 mb-1 rounded-lg">
           <div className="flex flex-col gap-3">
             <p className="text-white/60 text-sm font-bold leading-4">Type</p>
             <p className="text-white font-bold text-sm leading-4">

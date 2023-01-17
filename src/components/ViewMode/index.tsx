@@ -33,7 +33,7 @@ const ViewMode = (props: IViewMode) => {
   return (
     <div className="w-full px-3 sm:px-0">
       <Tab.Group onChange={onToggleViewMode}>
-        <Tab.List className="flex space-x-1 rounded-md bg-searchbar-400 p-1 ">
+        <Tab.List className="flex space-x-1 rounded-md bg-body-400 p-1 ">
           {viewModes.map((view) => (
             <Tab
               key={view.mode}

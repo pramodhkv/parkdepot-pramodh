@@ -81,10 +81,7 @@ const ShipDetails = () => {
           <p className="text-white/60 text-sm font-bold mt-3">Missions:</p>
           <div className="grid grid-cols-3 md:grid-cols-4 text-center gap-3">
             {ship.missions.map((mission: any) => (
-              <div
-                className="bg-searchbar-400 p-4 rounded-xl"
-                key={mission.name}
-              >
+              <div className="bg-body-400 p-4 rounded-xl" key={mission.name}>
                 <p className="text-white font-bold text-xs md:text-sm">
                   {mission.name}
                 </p>

@@ -12,7 +12,7 @@ const ShipListView = (props: IShipListViewProps) => {
   return (
     <Link
       to={`/details/${ship.id}`}
-      className="bg-searchbar-400 w-full min-h-[6rem] rounded-xl cursor-pointer"
+      className="bg-body-400 w-full min-h-[6rem] rounded-xl cursor-pointer"
     >
       <div className="flex items-center py-4 px-1 md:px-8">
         <div className="image-wrapper w-20 h-20 md:w-24 md:h-24 relative overflow-hidden">
