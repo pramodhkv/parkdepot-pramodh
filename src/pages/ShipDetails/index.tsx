@@ -44,7 +44,7 @@ const ShipDetails = () => {
 
         <div className="flex flex-col">
           <p className="text-white/60 text-sm font-bold mt-3">Name:</p>
-          <p className="text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold">
+          <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-bold">
             {ship.name}
           </p>
         </div>
